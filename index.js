@@ -11,7 +11,7 @@ const newFileFound = filename => {
 	console.log(filename);
 
 	sharp('test.png')
-		.extract({ left: 0, top: 0, width: 500, height: 500 })
+		.extract({ left: 40, top: 250, width: 670, height: 650 })
 		.toFile('test-crop.png', function(err) {
 			console.log('error', err);
 			console.log(`${__dirname}/test-crop.png`);
