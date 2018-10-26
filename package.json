@@ -1,19 +1,23 @@
 {
-  "name": "hqtrivia-solver",
-  "version": "0.0.1",
-  "description": "TODO: - [ ] Setup IOScapture app to capture screenshots from IOS directly on Macbook (other methods might also work, it just needs a quick way (i'm talking about milliseconds here) to get the image on the computer) - [ ] Create node.js script to watch for new files in certain directory - [ ] Crop new screenshot en use Tesseract.js library to extract the question and possible answers - [ ] Use NLP to clean text and extract keywords - [ ] User several API's like google/bing/wikipedia to score each possible answer - [ ] Get that HQTrivia cash yo!",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EmericW/HQTrivia-solver.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/EmericW/HQTrivia-solver/issues"
-  },
-  "homepage": "https://github.com/EmericW/HQTrivia-solver#readme"
+	"name": "hqtrivia-solver",
+	"version": "0.0.1",
+	"description": "TODO: - [ ] Setup IOScapture app to capture screenshots from IOS directly on Macbook (other methods might also work, it just needs a quick way (i'm talking about milliseconds here) to get the image on the computer) - [ ] Create node.js script to watch for new files in certain directory - [ ] Crop new screenshot en use Tesseract.js library to extract the question and possible answers - [ ] Use NLP to clean text and extract keywords - [ ] User several API's like google/bing/wikipedia to score each possible answer - [ ] Get that HQTrivia cash yo!",
+	"main": "index.js",
+	"scripts": {
+		"start": "forever -c start index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/EmericW/HQTrivia-solver.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/EmericW/HQTrivia-solver/issues"
+	},
+	"homepage": "https://github.com/EmericW/HQTrivia-solver#readme",
+	"dependencies": {
+		"forever": "^0.15.3",
+		"sharp": "^0.21.0"
+	}
 }
