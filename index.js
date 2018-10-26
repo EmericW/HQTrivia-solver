@@ -8,18 +8,21 @@ const sharp = require('sharp');
 const tesseract = require('tesseract.js');
 
 const newFileFound = filename => {
-	console.log(filename);
-
 	sharp('test.png')
 		.extract({ left: 40, top: 250, width: 670, height: 650 })
 		.toFile('test-crop.png', function(err) {
-			console.log('error', err);
-			console.log(`${__dirname}/test-crop.png`);
 			tesseract
 				.recognize(`${__dirname}/test-crop.png`, {
 					lang: 'eng',
 				})
-				.then(result => console.log('result', result.text));
+				.then(result => {
+					const part = result.text.split('?');
+					const q = part[0].split('\n').join(' ');
+					const as = part[1].split('\n').filter(i => i);
+					console.log(`Question: ${q}`);
+					console.log('Answers: ');
+					as.forEach((a, i) => console.log(`\t${i}: ${a}`));
+				});
 		});
 };
 
