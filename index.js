@@ -5,6 +5,7 @@ setInterval(function() {
 
 const fs = require('fs');
 const sharp = require('sharp');
+const tesseract = require('tesseract.js');
 
 const newFileFound = filename => {
 	console.log(filename);
@@ -12,9 +13,13 @@ const newFileFound = filename => {
 	sharp('test.png')
 		.extract({ left: 0, top: 0, width: 500, height: 500 })
 		.toFile('test-crop.png', function(err) {
-			console.log(err);
-			// output.jpg is a 300 pixels wide and 200 pixels high image
-			// containing a scaled and cropped version of input.jpg
+			console.log('error', err);
+			console.log(`${__dirname}/test-crop.png`);
+			tesseract
+				.recognize(`${__dirname}/test-crop.png`, {
+					lang: 'eng',
+				})
+				.then(result => console.log('result', result.text));
 		});
 };
 
