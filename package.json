@@ -19,6 +19,7 @@
 	"dependencies": {
 		"forever": "^0.15.3",
 		"sharp": "^0.21.0",
-		"tesseract.js": "^1.0.10"
+		"tesseract.js": "^1.0.10",
+		"wikijs": "^4.8.1"
 	}
 }

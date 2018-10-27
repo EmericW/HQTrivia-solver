@@ -186,6 +186,10 @@ caller@~0.0.1:
   dependencies:
     tape "~2.3.2"
 
+camelcase@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
+
 chokidar@^1.0.1:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
@@ -672,6 +676,12 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
+infobox-parser@3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/infobox-parser/-/infobox-parser-3.0.3.tgz#27b848ab9cfca52b98c4d63cf628b2fce043477c"
+  dependencies:
+    camelcase "^4.1.0"
+
 inherits@2, inherits@^2.0.1, inherits@~2.0.1, inherits@~2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
@@ -833,6 +843,13 @@ isobject@^2.0.0:
 isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
+
+isomorphic-fetch@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
+  dependencies:
+    node-fetch "^1.0.1"
+    whatwg-fetch ">=0.10.0"
 
 isstream@0.1.x:
   version "0.1.2"
@@ -1041,7 +1058,7 @@ node-abi@^2.2.0:
   dependencies:
     semver "^5.4.1"
 
-node-fetch@^1.6.3:
+node-fetch@^1.0.1, node-fetch@^1.6.3:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
   dependencies:
@@ -1725,6 +1742,10 @@ utile@0.2.1, utile@0.2.x, utile@~0.2.1:
     ncp "0.4.x"
     rimraf "2.x.x"
 
+whatwg-fetch@>=0.10.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
+
 which-pm-runs@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/which-pm-runs/-/which-pm-runs-1.0.0.tgz#670b3afbc552e0b55df6b7780ca74615f23ad1cb"
@@ -1734,6 +1755,13 @@ wide-align@^1.1.0:
   resolved "https://registry.yarnpkg.com/wide-align/-/wide-align-1.1.3.tgz#ae074e6bdc0c14a431e804e624549c633b000457"
   dependencies:
     string-width "^1.0.2 || 2"
+
+wikijs@^4.8.1:
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/wikijs/-/wikijs-4.8.1.tgz#06799ba2af417b15bb0bb9711b17830364918253"
+  dependencies:
+    infobox-parser "3.0.3"
+    isomorphic-fetch "^2.2.1"
 
 winston@0.8.0:
   version "0.8.0"
