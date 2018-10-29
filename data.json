@@ -1,0 +1,42 @@
+[
+	{
+		"question": "Disney’s “Aladdin” features a magical version of which of these things?",
+		"answers": ["Kitchen island", "Walk-in closet", "Carpet"]
+	},
+	{
+		"question": "What delicious dish do Lady and Tramp famously share?",
+		"answers": ["Blueberry matcha muffin", "Spaghetti", "Pumpkin spice nest soup"]
+	},
+	{
+		"question": "Which of these Disney songs was sung by a mermaid?",
+		"answers": ["Circle of Life", "Be Our Guest", "Part of Your World"]
+	},
+	{
+		"question": "In which of these films is one of the main characters from outer space?",
+		"answers": ["Finding Nemo", "The Rescuers Down Under", "Lilo & Stitch"]
+	},
+	{
+		"question": "What does the “J” in Dr. J stand for?",
+		"answers": ["Juggalo", "Julius", "Jorts"]
+	},
+	{
+		"question": "Which of these scoring plays gets a football team exactly three points?",
+		"answers": ["Safety", "Field goal", "Touchdown"]
+	},
+	{
+		"question": "Who was the first Little League baseball player to appear on the cover of “Sports Illustrated”?",
+		"answers": ["Mo'ne Davis", "Todd Frazier", "Danny Almonte"]
+	},
+	{
+		"question": "When a ball is batted, home plate is considered what kind of territory?",
+		"answers": ["Fair", "Foul", "Part fair / part foul"]
+	},
+	{
+		"question": "Accepting an Oscar in 1985, Sally Field said, “You like me,” followed by what?",
+		"answers": ["Right now, you like me!", "I know you like me!", "You really like me!"]
+	},
+	{
+		"question": "Which of these authors has reportedly sold the most books overall?",
+		"answers": ["Danielle Steel", "Agatha Christie", "JK Rowling"]
+	}
+]
