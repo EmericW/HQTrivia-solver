@@ -20,9 +20,11 @@
 	"dependencies": {
 		"dotenv": "^6.1.0",
 		"forever": "^0.15.3",
+		"natural": "^0.6.2",
 		"node-html-parser": "^1.1.10",
 		"request": "^2.88.0",
 		"sharp": "^0.21.0",
+		"stopword": "^0.1.13",
 		"tesseract.js": "^1.0.10",
 		"wikijs": "^4.8.1"
 	}

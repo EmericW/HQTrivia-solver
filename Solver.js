@@ -1,6 +1,7 @@
 const https = require('https');
 const events = require('events');
 const request = require('request');
+const stopword = require('stopword');
 const { parse } = require('node-html-parser');
 
 const calculatePercentages = answers => {
@@ -39,6 +40,18 @@ const scoreContent = (content, target, callback) => {
 	const regex = new RegExp(`${target.toLowerCase()}`, 'g');
 	const matches = content.toLowerCase().match(regex);
 	return (matches && matches.length) || 0;
+};
+
+const cleanInput = (question, answers) => {
+	const cleanQuestion = stopword.removeStopwords(question.split(' ')).join(' ');
+
+	const cleanAnswers = [];
+	answers.forEach(answer => cleanAnswers.push(stopword.removeStopwords(answer.split(' ')).join(' ')));
+
+	return {
+		question: cleanQuestion,
+		answers: cleanAnswers,
+	};
 };
 
 const searchByAnswers = (question, answers, callback) => {
@@ -90,9 +103,11 @@ const searchByQuestion = (question, answers, callback) => {
 	});
 };
 
-const solve = (question, answers, callback) => {
+const solve = (inputQuestion, inputAnswers, callback) => {
 	const emitter = new events.EventEmitter();
 	const probabilities = {};
+
+	const { question, answers } = cleanInput(inputQuestion, inputAnswers);
 	answers.forEach(a => (probabilities[a] = 0));
 	searchByQuestion(question, answers, result => {
 		emitter.emit('data', calculatePercentages(result));
