@@ -2,6 +2,7 @@ const https = require('https');
 const events = require('events');
 const request = require('request');
 const stopword = require('stopword');
+const stopwords = stopword[process.env.STOPWORD_LANG];
 const { parse } = require('node-html-parser');
 
 const calculatePercentages = answers => {
@@ -43,10 +44,10 @@ const scoreContent = (content, target, callback) => {
 };
 
 const cleanInput = (question, answers) => {
-	const cleanQuestion = stopword.removeStopwords(question.split(' ')).join(' ');
+	const cleanQuestion = stopword.removeStopwords(question.split(' '), stopwords).join(' ');
 
 	const cleanAnswers = [];
-	answers.forEach(answer => cleanAnswers.push(stopword.removeStopwords(answer.split(' ')).join(' ')));
+	answers.forEach(answer => cleanAnswers.push(stopword.removeStopwords(answer.split(' '), stopwords).join(' ')));
 
 	return {
 		question: cleanQuestion,
